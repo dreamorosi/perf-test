@@ -1,0 +1,15 @@
+config:
+  target: "{{ $processEnvironment.API_URL }}"
+  phases:
+    - duration: 600
+      arrivalRate: 300
+
+scenarios:
+  - name: "Get runtime16"
+    flow:
+      - get:
+          url: "/node16"
+  - name: "Get runtime18"
+    flow:
+      - get:
+          url: "/node18"
